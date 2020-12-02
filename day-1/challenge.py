@@ -1,7 +1,7 @@
 import time
 
 
-with open('input.txt') as f:
+with open('input/day-1.txt') as f:
     input = [int(i) for i in f.read().splitlines()]
 
 
@@ -31,19 +31,22 @@ def find_combination_of_3_fancy(input, goal=2020):
 
 def main():
     tic = time.perf_counter()
-    assert find_combination_of_2(input) == 319531
+    answer_one = find_combination_of_2(input)
     toc = time.perf_counter()
     print(f"find_combination_of_2 took {toc - tic:0.4f} seconds")
 
     tic = time.perf_counter()
-    assert find_combination_of_3(input) == 244300320
+    answer_two = find_combination_of_3(input)
     toc = time.perf_counter()
     print(f"find_combination_of_3 took {toc - tic:0.4f} seconds")
 
     tic = time.perf_counter()
-    assert find_combination_of_3_fancy(input) == 244300320
+    answer_two_fancy = find_combination_of_3_fancy(input) == 244300320
     toc = time.perf_counter()
     print(f"find_combination_of_3_fancy took {toc - tic:0.4f} seconds")
+
+    print('Answer one is ' + str(answer_one))
+    print('Answer two is ' + str(answer_two))
 
 
 if __name__ == "__main__":

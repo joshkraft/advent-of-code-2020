@@ -24,7 +24,7 @@ class Password:
 
 
 def main(input):
-    with open('input.txt') as f:
+    with open('input/day-2.txt') as f:
         passwords = [Password(line) for line in f.read().splitlines()]
 
     answer_1 = sum(password.is_valid_1() for password in passwords)
