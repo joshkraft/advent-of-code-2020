@@ -28,6 +28,7 @@ def find_combination_of_3_fancy(input, goal=2020):
                 if a + b + c == goal:
                     return a * b * c
 
+
 def main():
     tic = time.perf_counter()
     assert find_combination_of_2(input) == 319531
@@ -43,6 +44,7 @@ def main():
     assert find_combination_of_3_fancy(input) == 244300320
     toc = time.perf_counter()
     print(f"find_combination_of_3_fancy took {toc - tic:0.4f} seconds")
+
 
 if __name__ == "__main__":
     main()
