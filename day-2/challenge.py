@@ -23,7 +23,7 @@ class Password:
         return first_char != last_char
 
 
-def main(input):
+def main():
     with open('input/day-2.txt') as f:
         passwords = [Password(line) for line in f.read().splitlines()]
 
@@ -34,7 +34,7 @@ def main(input):
     print('Answer two is ' + str(answer_2))
 
 
-main(input)
-
+if __name__ == "__main__":
+    main()
 
 
